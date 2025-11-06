@@ -1,2 +1,33 @@
-# Fraud-Detection-with-SQL
-In this independent SQL project idea, We'll work with multiple CSV files to create a database schema and database, then query your new database to identify potentially fraudulent transactions. 
+#  Fraud Detection with SQL
+
+In this independent SQL project idea, we'll work with multiple CSV files to create a database schema and database, then query your new database to identify potentially fraudulent transactions. Fraud is everywhere these days, and while there are emerging technologies that employ machine learning and artificial intelligence to detect fraud, many instances still require strong data analytics to find abnormal charges. You'll apply SQL skills to analyze historical credit card transactions and consumption patterns in order to identify possible fraudulent transactions.
+
+&nbsp;
+&nbsp;
+
+## 📖 Project Requirements and Objectives 
+
+### 🧩 Data Warehouse Construction - Data Engineering Phase
+
+#### Objective
+Design, build, and populate a SQL data warehouse that stores and structures all relevant data for subsequent fraud detection analytics.
+
+#### Specifications
+- **Data Sources**: Import data from multiple CSV files to create a database schema and database.
+- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
+- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
+- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+&nbsp;
+&nbsp;
+### 📊 Data Warehouse Construction - Data Engineering Phase
+
+#### Objective
+Perform analytical queries and visualizations to detect and report potentially fraudulent transactions. 
+
+#### Specifications
+- Find the top 100 highest transactions during early morning hours (7-9 AM)
+- Count transactions less than $2.00 per cardholder to check for hacked cards
+- Identify the top 5 merchants prone to being hacked with small transactions
+- Create views for reusable queries
+- Create a report for fraudulent transactions of top customers using Python and data visualization libraries
+- Analyze outlier/anomalous transactions using techniques like standard deviation and interquartile range
