@@ -31,3 +31,19 @@ Perform analytical queries and visualizations to detect and report potentially f
 - Create views for reusable queries
 - Create a report for fraudulent transactions of top customers using Python and data visualization libraries
 - Analyze outlier/anomalous transactions using techniques like standard deviation and interquartile range
+
+
+## 🧱 Data Warehouse Architecture Decision: 
+&nbsp;
+&nbsp;
+For this project, I decided to implement the Medallion Data Architecture (Bronze → Silver → Gold) to structure the data warehouse and analytical workflow. This layered design enables a clear separation between raw data ingestion, data cleaning and enrichment, and analytical reporting.
+
+<img width="1374" height="782" alt="Fraud Data Warehouse drawio" src="https://github.com/user-attachments/assets/67cec9ee-f760-4f4d-8d6a-110cebdfaa6b" />
+
+&nbsp;
+
+- The Bronze layer stores raw transactional data exactly as received from source files, preserving full data lineage. 
+- The Silver layer refines and normalizes this data by applying transformations, data quality checks, and integrity constraints, preparing it for analysis. 
+- The Gold layer aggregates and models the cleaned data into business-ready views that support fraud detection analytics and reporting.
+
+
