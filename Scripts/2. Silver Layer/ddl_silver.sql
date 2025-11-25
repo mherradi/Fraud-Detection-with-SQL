@@ -1,4 +1,14 @@
+/*
+========================================================================================
+DDL Script: Create Silver Tables
+========================================================================================
+Script Purpose:
+This script creates tables in the 'silver' schema, dropping existing tables
+if they already exist.
+Run this script to re-define the DDL structure of "bronze' Tables
 
+========================================================================================
+*/
 
 -------  > Creating Card Holder Table
 
@@ -93,5 +103,6 @@ create table silver.transactions(
     card            Varchar(25),
     id_merchant     Int ,
 	dwh_create_date		Datetime2 Default GETDATE()
+
 
 ) ;
