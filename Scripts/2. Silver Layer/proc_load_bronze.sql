@@ -22,7 +22,6 @@ EXEC Silver.load_silver;
 */
 
 
-
 CREATE OR ALTER PROCEDURE silver.load_silver
 AS
 BEGIN
@@ -73,7 +72,7 @@ BEGIN
 
         INSERT INTO silver.credit_card (card, id_card_holder)
         SELECT 
-            SUBSTRING(CONVERT(VARCHAR(25), CONVERT(DECIMAL(38,0), card)), 1, 4) AS card,
+            SUBSTRING(convert(varchar(25), convert(decimal(38,0), card)) ,0,6) AS card,
             id_card_holder
         FROM bronze.credit_card;
 
@@ -140,7 +139,7 @@ BEGIN
             id,
             transaction_dt,
             amount,
-            SUBSTRING(CONVERT(VARCHAR(25), CONVERT(DECIMAL(38,0), card)), 1, 4),
+            SUBSTRING(convert(varchar(25), card)  ,0 , 6)  as card,
             id_merchant
         FROM bronze.transactions;
 
@@ -173,5 +172,7 @@ BEGIN
 
 
 END;
+
+
 
 
