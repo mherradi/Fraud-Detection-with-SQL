@@ -311,21 +311,22 @@ where
 
 select
 
-	 distinct SUBSTRING(convert(varchar(25), card)  ,0 , 5) transactions_card
+	 distinct SUBSTRING(convert(varchar(25), card)  ,0 , 6) transactions_card
 
 from
 	bronze.transactions 
 
 where
-	SUBSTRING(convert(varchar(25), card)  ,0 , 5) not in (
+	SUBSTRING(convert(varchar(25), card)  ,0 , 6) not in (
 	
 	
 	select
-		SUBSTRING(convert(varchar(25), convert(decimal(38,0), card)) ,0,5)
+		SUBSTRING(convert(varchar(25), convert(decimal(38,0), card)) ,0,6)
 	from	
 		bronze.credit_card
 	
 	)
+
 
 
 
