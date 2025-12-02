@@ -47,13 +47,6 @@ On
 
 
 
-
-
-
-
-
-
-
 /*-------------------------------------------- Create Dimension Merchant Table  --------------------------------------------*/
 
 
@@ -81,9 +74,6 @@ Left Join
 
 On
 	m.id_merchant_category = c.id ;
-
-
-
 
 
 
@@ -127,6 +117,7 @@ Left Join
 
 On
 	trans.id_merchant = m.merchant_id ;
+
 
 
 
